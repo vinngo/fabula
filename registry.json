@@ -75,6 +75,73 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "emphasis",
+      "type": "registry:component",
+      "title": "Emphasis",
+      "description": "An animated underline emphasis component with Framer Motion.",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/emphasis.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-emphasis",
+      "type": "registry:component",
+      "title": "Example Emphasis",
+      "description": "A sleek emphasis component example.",
+      "dependencies": ["framer-motion"],
+      "registryDependencies": ["emphasis"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/example-emphasis/example-emphasis.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "expandable",
+      "type": "registry:component",
+      "title": "Expandable",
+      "description": "A compound expandable component with smooth height animations.",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/expandable.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:component",
+      "title": "Dropdown",
+      "description": "An animated dropdown menu component.",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/dropdown.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-dropdown",
+      "type": "registry:component",
+      "title": "Example Dropdown",
+      "description": "An animated dropdown menu example.",
+      "dependencies": ["framer-motion"],
+      "registryDependencies": ["dropdown"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/example-dropdown/example-dropdown.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
