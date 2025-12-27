@@ -3,8 +3,10 @@
   "name": "expandable",
   "type": "registry:component",
   "title": "Expandable",
-  "description": "An animated card that reveals itself on hover.",
-  "dependencies": ["framer-motion"],
+  "description": "A compound expandable component with smooth height animations.",
+  "dependencies": [
+    "framer-motion"
+  ],
   "files": [
     {
       "path": "registry/new-york/ui/expandable.tsx",

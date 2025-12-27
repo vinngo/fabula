@@ -5,27 +5,27 @@
   "items": [
     {
       "name": "emphasis",
-      "type": "registry:ui",
+      "type": "registry:component",
       "title": "Emphasis",
-      "description": "A sleek emphasis component with animated underline effect.",
+      "description": "An animated underline emphasis component with Framer Motion.",
       "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "registry/new-york/ui/emphasis.tsx",
-          "type": "registry:ui"
+          "type": "registry:component"
         }
       ]
     },
     {
       "name": "expandable",
-      "type": "registry:ui",
+      "type": "registry:component",
       "title": "Expandable",
-      "description": "An animated expandable component that reveals content on hover with a gradient fade hint.",
+      "description": "A compound expandable component with smooth height animations.",
       "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "registry/new-york/ui/expandable.tsx",
-          "type": "registry:ui"
+          "type": "registry:component"
         }
       ]
     }
