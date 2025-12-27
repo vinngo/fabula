@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "emphasis",
+  "type": "registry:component",
+  "title": "Emphasis",
+  "description": "An animated underline that reveals from left to right.",
+  "dependencies": ["framer-motion"],
+  "files": [
+    {
+      "path": "registry/new-york/ui/emphasis.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\n\nimport { motion, HTMLMotionProps } from \"framer-motion\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Emphasis({ className, ...props }: HTMLMotionProps<\"div\">) {\n  return (\n    <motion.div\n      data-slot=\"emphasis\"\n      className={cn(\n        \"absolute bottom-0 left-0 right-0 h-px bg-primary\",\n        className,\n      )}\n      {...props}\n      style={{ transformOrigin: \"left\" }}\n      initial={{ scaleX: 0, opacity: 0 }}\n      animate={{ scaleX: 1, opacity: 1 }}\n      transition={{ duration: 0.6, ease: \"easeOut\" }}\n    ></motion.div>\n  );\n}\n\nexport { Emphasis };\n",
+      "type": "registry:component"
+    }
+  ]
+}
