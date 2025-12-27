@@ -13,7 +13,7 @@ export default function ExampleEmphasis() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <p className="text-lg font-light font-mono">hover me</p>
+        <p className="text-lg font-light">hover me</p>
         {isHovered && <Emphasis />}
       </div>
     </div>
