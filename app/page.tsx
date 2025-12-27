@@ -25,7 +25,7 @@ export default function Home() {
             <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
               A sleek emphasis
             </h2>
-            <OpenInV0Button name="example-emphasis" className="w-fit" />
+            <OpenInV0Button name="emphasis" className="w-fit" />
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <ExampleEmphasis />
@@ -37,7 +37,7 @@ export default function Home() {
             <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
               An animated card that reveals itself on hover.
             </h2>
-            <OpenInV0Button name="example-dropdown" className="w-fit" />
+            <OpenInV0Button name="expandable" className="w-fit" />
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <ExampleDropdown />
