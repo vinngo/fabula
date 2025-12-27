@@ -12,7 +12,8 @@
       "files": [
         {
           "path": "registry/new-york/ui/emphasis.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/ui/fabula/emphasis.tsx"
         }
       ]
     },
@@ -25,7 +26,8 @@
       "files": [
         {
           "path": "registry/new-york/ui/expandable.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/ui/fabula/expandable.tsx"
         }
       ]
     }
