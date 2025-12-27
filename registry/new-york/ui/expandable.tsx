@@ -53,6 +53,7 @@ function ExpandableContent({
   const { isOpen } = useExpandable();
   const contentRef = React.useRef<HTMLDivElement>(null);
   const [height, setHeight] = React.useState(0);
+  const peekHeight = 40; // Show ~24px of content as a hint
 
   React.useEffect(() => {
     if (contentRef.current) {
@@ -72,11 +73,10 @@ function ExpandableContent({
     <motion.div
       initial={false}
       animate={{
-        height: isOpen ? height : 0,
-        opacity: isOpen ? 1 : 0,
+        height: isOpen ? height : peekHeight,
       }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="overflow-hidden"
+      className="overflow-hidden relative"
     >
       <div
         ref={contentRef}
@@ -85,6 +85,9 @@ function ExpandableContent({
       >
         {children}
       </div>
+      {!isOpen && (
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+      )}
     </motion.div>
   );
 }

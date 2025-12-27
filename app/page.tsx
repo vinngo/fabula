@@ -1,8 +1,6 @@
 import * as React from "react";
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form";
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page";
-import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card";
 import ExampleEmphasis from "@/registry/new-york/blocks/example-emphasis/example-emphasis";
 import ExampleDropdown from "@/registry/new-york/blocks/example-dropdown/example-dropdown";
 import ExamplePullquote from "@/registry/new-york/blocks/example-pullquote/example-pullquote";
@@ -25,18 +23,6 @@ export default function Home() {
         <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
-              Button variants showcase
-            </h2>
-            <OpenInV0Button name="example-button" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <ExampleButton />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
               A sleek emphasis
             </h2>
             <OpenInV0Button name="example-emphasis" className="w-fit" />
@@ -55,6 +41,18 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <ExampleDropdown />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
+              Button variants showcase
+            </h2>
+            <OpenInV0Button name="example-button" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <ExampleButton />
           </div>
         </div>
 
@@ -85,24 +83,12 @@ export default function Home() {
         <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A complex component showing hooks, libs and components.
+              A contact form with Zod validation.
             </h2>
-            <OpenInV0Button name="complex-component" className="w-fit" />
+            <OpenInV0Button name="example-form" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <PokemonPage />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A login form with a CSS file.
-            </h2>
-            <OpenInV0Button name="example-with-css" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <ExampleCard />
+          <div className="flex items-center justify-center min-h-[500px] relative">
+            <ExampleForm />
           </div>
         </div>
       </main>
