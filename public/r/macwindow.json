@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "macwindow",
+  "type": "registry:component",
+  "title": "MacWindow",
+  "description": "A macOS-style window component with traffic light controls and size variants.",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/new-york/ui/macwindow.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface MacWindowProps {\n  children: React.ReactNode;\n  title?: string;\n  size?: \"sm\" | \"md\" | \"lg\";\n  className?: string;\n}\n\nconst sizeVariants = {\n  sm: {\n    container: \"max-w-sm\",\n    padding: \"p-2\",\n    button: \"w-2 h-2\",\n    gap: \"gap-1.5\",\n  },\n  md: {\n    container: \"max-w-md\",\n    padding: \"p-3\",\n    button: \"w-3 h-3\",\n    gap: \"gap-2\",\n  },\n  lg: {\n    container: \"max-w-2xl\",\n    padding: \"p-4\",\n    button: \"w-4 h-4\",\n    gap: \"gap-2.5\",\n  },\n};\n\nfunction MacWindow({ children, size = \"md\", className }: MacWindowProps) {\n  const variant = sizeVariants[size];\n\n  return (\n    <div\n      className={cn(\n        \"border border-gray-300 rounded-xl w-full\",\n        variant.container,\n        className,\n      )}\n    >\n      <div className=\"h-full rounded-t-xl bg-gray-100 dark:bg-gray-800\">\n        <div\n          className={cn(\"flex items-center justify-between\", variant.padding)}\n        >\n          <div className={cn(\"flex items-center\", variant.gap)}>\n            <button\n              className={cn(\"rounded-full\", variant.button)}\n              style={{\n                backgroundColor: \"#fe5f57\",\n              }}\n            ></button>\n            <button\n              className={cn(\"rounded-full\", variant.button)}\n              style={{ backgroundColor: \"#f9c74f\" }}\n            ></button>\n            <button\n              className={cn(\"rounded-full\", variant.button)}\n              style={{ backgroundColor: \"#27c83e\" }}\n            ></button>\n          </div>\n        </div>\n      </div>\n      {children}\n    </div>\n  );\n}\n\nexport { MacWindow };\n",
+      "type": "registry:component",
+      "target": "components/ui/fabula/macwindow.tsx"
+    }
+  ]
+}

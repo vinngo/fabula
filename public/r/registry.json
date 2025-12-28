@@ -30,6 +30,20 @@
           "target": "components/ui/fabula/expandable.tsx"
         }
       ]
+    },
+    {
+      "name": "macwindow",
+      "type": "registry:component",
+      "title": "MacWindow",
+      "description": "A macOS-style window component with traffic light controls and size variants.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/new-york/ui/macwindow.tsx",
+          "type": "registry:component",
+          "target": "components/ui/fabula/macwindow.tsx"
+        }
+      ]
     }
   ]
 }

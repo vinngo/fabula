@@ -5,6 +5,7 @@ import ExampleEmphasis from "@/registry/new-york/blocks/example-emphasis/example
 import ExampleDropdown from "@/registry/new-york/blocks/example-dropdown/example-dropdown";
 import ExamplePullquote from "@/registry/new-york/blocks/example-pullquote/example-pullquote";
 import ExampleButton from "@/registry/new-york/blocks/example-button/example-button";
+import ExampleMacWindow from "@/registry/new-york/blocks/example-macwindow/example-macwindow";
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
@@ -41,6 +42,18 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
             <ExampleDropdown />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3 font-serif">
+              A macOS-style window component with traffic light controls.
+            </h2>
+            <OpenInV0Button name="example-macwindow" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[400px] relative">
+            <ExampleMacWindow />
           </div>
         </div>
 
