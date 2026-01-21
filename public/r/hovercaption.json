@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hovercaption",
+  "type": "registry:component",
+  "title": "HoverCaption",
+  "description": "A smooth-following caption that tracks mouse movement with spring animations.",
+  "dependencies": ["framer-motion"],
+  "files": [
+    {
+      "path": "registry/new-york/ui/hovercaption.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { motion, useSpring } from \"framer-motion\";\n\ninterface HoverCaptionProps {\n  caption: string;\n  initialX: number;\n  initialY: number;\n}\n\nconst spring = { damping: 20, stiffness: 200, restDelta: 0.01 };\n\nexport function HoverCaption({\n  caption,\n  initialX,\n  initialY,\n}: HoverCaptionProps) {\n  const ref = React.useRef<HTMLDivElement>(null);\n  const initialized = React.useRef(false);\n\n  const left = useSpring(initialX, spring);\n  const top = useSpring(initialY - 30, spring);\n\n  React.useLayoutEffect(() => {\n    if (!initialized.current) {\n      const element = ref.current;\n      const offsetX = element ? element.offsetWidth / 2 : 0;\n      const offsetY = element ? element.offsetHeight + 10 : 30;\n\n      left.jump(initialX - offsetX);\n      top.jump(initialY - offsetY);\n      initialized.current = true;\n    }\n  }, [initialX, initialY, left, top]);\n\n  React.useEffect(() => {\n    const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {\n      const element = ref.current;\n      const offsetX = element ? element.offsetWidth / 2 : 0;\n      const offsetY = element ? element.offsetHeight + 10 : 20;\n\n      left.set(clientX - offsetX);\n      top.set(clientY - offsetY);\n    };\n\n    window.addEventListener(\"pointermove\", handlePointerMove);\n\n    return () => window.removeEventListener(\"pointermove\", handlePointerMove);\n  }, [left, top]);\n\n  return (\n    <motion.div\n      ref={ref}\n      className=\"fixed border bg-background text-foreground p-2 rounded-sm shadow-lg pointer-events-none z-50 font-mono text-sm\"\n      style={{ left, top }}\n    >\n      {caption}\n    </motion.div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/fabula/hovercaption.tsx"
+    }
+  ]
+}
