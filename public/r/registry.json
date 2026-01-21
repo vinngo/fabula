@@ -44,6 +44,20 @@
           "target": "components/ui/fabula/macwindow.tsx"
         }
       ]
+    },
+    {
+      "name": "hovercaption",
+      "type": "registry:component",
+      "title": "HoverCaption",
+      "description": "A smooth-following caption that tracks mouse movement with spring animations.",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/hovercaption.tsx",
+          "type": "registry:component",
+          "target": "components/ui/fabula/hovercaption.tsx"
+        }
+      ]
     }
   ]
 }
